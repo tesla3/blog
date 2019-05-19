@@ -72,7 +72,6 @@ Checkout your how your blog looks like at localhost:1313
 
 ## github
 ### Create a repo in github
-{{< figure src="/img/new_github_repo.png" height="120"  >}}
 
 You will get a `[git_repo_url]` e.g. `https://github.com/tesla3/blog.git`
 
@@ -99,15 +98,12 @@ git push
 
 It is pretty straightforward. Only things specific to hugo: at step of "Basic build setting", put **hugo** in **Build command** and **public/** in **Publish directory**
 
-{{< figure src="/img/netlify_hugo_build_setting.png" height="360"  >}}
 
 * Note: it seems netlify figures out by itself the repo is a hugo, so both build command and publish directory is auto filled if you have pushed hugo repo to github before linking netlify to your github 
 
 ### Now whenever you push to your git repo master branch, netlify will rebuild and publish the site for you.
 
 Here is how you can check your **deploy** status from netlify
-
-{{< figure src="/img/netlify_deploy.png" height="360"  >}}
 
 
 
