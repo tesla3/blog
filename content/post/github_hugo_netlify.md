@@ -4,7 +4,7 @@ date: 2019-05-19T12:22:19-07:00
 draft: false
 ---
 
-I am late, very late, to the game of blogging. But, any way, I start to have something to say. Inspired by posts [https://blog.omerh.me/post/2019/05/17/first_post/, ], I decided to get it going. 
+I am late, very late, to the game of blogging. But, any way, I start to have something to say. Inspired by [this post] (https://blog.omerh.me/post/2019/05/17/first_post/) and [this post] (https://brainfood.xyz/post/20190518-host-your-own-blog-in-1-hour/), I decided to get it going. 
 
 # Main idea
 - github: to host and track revision of contents
@@ -27,15 +27,11 @@ hugo new site [path]
 
 
 ### Download a theme 
-Go to https://themes.gohugo.io/ and pick one. I picked m10c
+Go to [hugo themes] (https://themes.gohugo.io/) and pick one. I picked zen
 
 ```bash
 cd [path]
-git submodule add https://github.com/vaga/hugo-theme-m10c.git  themes/m10c
-
-#directly clone 
-#git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
-#
+git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
 ```
 
 ### Bootstrap  config.toml
@@ -72,6 +68,7 @@ Checkout your how your blog looks like at localhost:1313
 
 ## github
 ### Create a repo in github
+<!-- {{< figure src="/img/new_github_repo.png" height="120"  >}} -->
 
 You will get a `[git_repo_url]` e.g. `https://github.com/tesla3/blog.git`
 
@@ -98,12 +95,15 @@ git push
 
 It is pretty straightforward. Only things specific to hugo: at step of "Basic build setting", put **hugo** in **Build command** and **public/** in **Publish directory**
 
+{{< figure src="/img/netlify_hugo_build_setting.png" height="360"  >}}
 
 * Note: it seems netlify figures out by itself the repo is a hugo, so both build command and publish directory is auto filled if you have pushed hugo repo to github before linking netlify to your github 
 
 ### Now whenever you push to your git repo master branch, netlify will rebuild and publish the site for you.
 
 Here is how you can check your **deploy** status from netlify
+
+{{< figure src="/img/netlify_deploy.png" height="360"  >}}
 
 
 
