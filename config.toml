@@ -1,46 +1,48 @@
 baseURL = "https://example.com"
 languageCode = "en-us"
-#defaultContentLanguage = "en"
-title = "Ramblings from Neo"
-themesDir = "themes"
-theme = "zen"
-paginate = 5
+defaultContentLanguage = "en"
+title = "Cupper"
+theme = "cupper-hugo-theme"
+#googleAnalytics = "UA-123456789-1"
+#disqusShortname = "yourdiscussshortname"
+enableGitInfo = true
 
-enableGitInfo =  false
-enableRobotsTXT =  true
-googleAnalytics =  ""
-disqusShortname =  ""
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:filename/"
+
+[imaging]
+  quality = 99
 
 [params]
-  author = "Thomas A. Anderson"
-  description = "Thoughts the behavior and intelligence of human and computer "
-  #[[params.social]]
-  #  name = "github"
-  #  url = "https://github.com/gohugoio"
-  #[[params.social]]
-  #  name = "twitter"
-  #  url = "https://twitter.com/gohugoio"
+  description = "An accessibility-friendly Hugo theme, ported from the [original Cupper](https://github.com/ThePacielloGroup/cupper) project."
+  homeMetaContent = "An accessibility-friendly Hugo theme, ported from the original Cupper project."
+  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/)."
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat = "Jan 2, 2006"
+  codePenUser = "someUser"
+  katex = true
 
-  # Brown theme
-  #[params.style]
-  #  darkestColor = "#463625"
-  #  darkColor = "#2a3738"
-  #  primaryColor = "#eeee6a"
-  #  lightColor = "#96a879"
-  #  lightestColor = "#ffffff"
-
-  # Green theme
-  #[params.style]
-  #  darkestColor = "#315659"
-  #  darkColor = "#253031"
-  #  primaryColor = "#dad865"
-  #  lightColor = "#96a879"
-  #  lightestColor = "#fff"
-
-  # Red and black theme
-  #[params.style]
-  #  darkestColor = "#d35050"
-  #  darkColor = "#212121"
-  #  primaryColor = "#ffffff"
-  #  lightColor = "#a2a2a2"
-  #  lightestColor = "#d3d3d3"
+[menu]
+  [[menu.nav]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.nav]]
+    name = "Blog"
+    url = "/post/"
+    weight = 2
+  [[menu.nav]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.nav]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+  [[menu.nav]]
+    name = "RSS"
+    url = "/index.xml"
+    weight = 5
