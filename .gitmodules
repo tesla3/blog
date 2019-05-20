@@ -10,3 +10,9 @@
 [submodule "themes/edidor"]
 	path = themes/edidor
 	url = https://github.com/jacobsun/edidor
+[submodule "themes/hugo-coder"]
+	path = themes/hugo-coder
+	url = https://github.com/luizdepra/hugo-coder.git
+[submodule "themes/hugo-whisper-theme"]
+	path = themes/hugo-whisper-theme
+	url = https://github.com/luizdepra/hugo-coder.git
