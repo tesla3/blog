@@ -1,14 +1,15 @@
 baseURL = "https://example.com"
 languageCode = "en-us"
+#defaultContentLanguage = "en"
 title = "Ramblings from Neo"
 themesDir = "themes"
-#theme = "cupper-hugo-theme"
-#does not play well with myimage
-theme = "zen"
+theme = "m10c"
 paginate = 5
-enableRobotsTXT = true
-googleAnalytics = ""
-disqusShortname = ""
+
+enableGitInfo =  false
+enableRobotsTXT =  true
+googleAnalytics =  ""
+disqusShortname =  ""
 
 [params]
   author = "Thomas A. Anderson"
