@@ -1,12 +1,12 @@
-baseurl = "http://www.example.com"
-#baseurl = "https://hardcore-goldwasser-13b00a.netlify.com"
+#baseurl = "http://www.example.com"
+baseurl = "https://hardcore-goldwasser-13b00a.netlify.com"
 title = "Ramblings from Neo"
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
 paginate = 10
-#canonifyurls = true
+canonifyurls = true
 
 pygmentsstyle = "b2"
 pygmentscodefences = true
