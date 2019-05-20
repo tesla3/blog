@@ -1,5 +1,5 @@
 ---
-title: "How to blog using github,hugo, netlify"
+title: "Blog using github,hugo, netlify"
 date: 2019-05-19T12:22:19-07:00
 draft: false
 ---
@@ -7,16 +7,16 @@ draft: false
 I am late, very late, to the game of blogging. But, any way, I start to have something to say. Inspired by [this post] (https://blog.omerh.me/post/2019/05/17/first_post/) and [this post] (https://brainfood.xyz/post/20190518-host-your-own-blog-in-1-hour/), I decided to get it going. 
 
 # Main idea
-- github: to host and track revision of contents
-- hugo: static content generator
+- **github**: to host and track revision of contents
+- **hugo**: static content generator
  - written in go
  - high performance (read: fast)
  - CLI friendly
-- netlify: content distribution network (CDN)
+- **netlify**: content distribution network (CDN)
 
-This setup gives us great flexibility, comparing to other managed such as wordpress or medium [ref]
+This setup gives us great flexibility, comparing to other managed blog platform such as wordpress or medium. 
 
-# Set up
+# Set up (local)
 ##  Hugo
 ### Install hugo and setup a new site
 Since I am on Mac, brew is the easiest way to go
@@ -25,45 +25,28 @@ brew install hugo
 hugo new site [path]
 ```
 
-
 ### Download a theme 
-Go to [hugo themes] (https://themes.gohugo.io/) and pick one. I picked zen
+Go to [hugo themes] (https://themes.gohugo.io/) and pick one. After some trail and error, I picked [Coder](https://themes.gohugo.io/hugo-coder/) for its cleanness and simplicity.
 
 ```bash
 cd [path]
-git submodule add https://github.com/frjo/hugo-theme-zen.git themes/zen
+git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder
 ```
 
-### Bootstrap  config.toml
-```bash
-cp themes/m10c/exampleSite/config.toml .
-```
+### Bootstrap 
+copy everything from `themes/huge-coder/exampleSite/` to `[path]`. Customize `config.toml`
+
+* baseurl has to set up properly before checking into github and build to deploy into netlify if `canonifyurls` is set to `true` 
 
 Update copied `config.toml`, pay attention to `themeDir` and `theme`
-```toml
-baseURL = "https://example.com"
-title = "Ramblings from Neo"
-themesDir = "themes"
-theme = "m10c"
-paginate = 5
 
-languageCode = "en-us"
-enableRobotsTXT = true
-googleAnalytics = ""
-disqusShortname = ""
-
-[params]
-  author = "Thomas A. Anderson"
-  description = "Thoughts on behavior and intelligence of human and computer"
-
-```
 
 ### Test out
 ```bash
 hugo server
 ```
 
-Checkout your how your blog looks like at localhost:1313
+Head to `localhost:1313` to check out how the blog 
 
 
 ## github
@@ -90,18 +73,14 @@ git push
 
 ## Connect netlify to your github repo
 
-### Flow [step-by-step](https://medium.com/the-codelog/how-to-deploy-a-website-to-netlify-35274f478144)
-
 It is pretty straightforward. Only things specific to hugo: at step of "Basic build setting", put **hugo** in **Build command** and **public/** in **Publish directory**
 
 
 * Note: it seems netlify figures out by itself the repo is a hugo, so both build command and publish directory is auto filled if you have pushed hugo repo to github before linking netlify to your github 
 
-### Now whenever you push to your git repo master branch, netlify will rebuild and publish the site for you.
+Now whenever you push to your git repo master branch, netlify will rebuild and publish the site for you.
 
-Here is how you can check your **deploy** status from netlify
-
-
+It is also straightforward to check your **deploy** status from [netlify](https://app.netlify.com/sites/)
 
 
 

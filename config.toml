@@ -1,28 +1,26 @@
-#baseurl = "http://www.example.com"
-baseurl = "https://hardcore-goldwasser-13b00a.netlify.com"
+baseurl = "http://www.example.com"
+#baseurl = "https://hardcore-goldwasser-13b00a.netlify.com"
 title = "Ramblings from Neo"
-
 theme = "hugo-coder"
-
 languagecode = "en"
 defaultcontentlanguage = "en"
 
-paginate = 5
-canonifyurls = true
+paginate = 10
+#canonifyurls = true
 
 pygmentsstyle = "b2"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-disqusShortname = "yourdiscussshortname"
+#disqusShortname = "yourdiscussshortname"
 
 [params]
     author = "Thomas A. Anderson"
     title = "Ramblings from Neo"
-    #description = "Thoughts on the behavior and intelligence of human and computer "
-    keywords = "blog,developer,personal,machine learning,intelligence"
-    #info = "Machine Learning, Learning Machine"
+    description = "Thoughts on the behavior and intelligence of human and computer "
     info = "Thoughts on the behavior and intelligence of human and computer "
+    keywords = "blog,developer,personal,machine learning,intelligence"
+
     avatarurl = "images/220px-NeoTheMatrix.jpg"
     #footercontent = "Understand Better"
     footercontent = "Machine Learning, Learning Machine"
@@ -33,7 +31,7 @@ disqusShortname = "yourdiscussshortname"
     hideCopyright = false
 
     # Git Commit in Footer, uncomment the line below to enable it.
-    commit = "https://github.com/luizdepra/hugo-coder/tree/"
+    # commit = "https://github.com/luizdepra/hugo-coder/tree/"
 
     rtl = false
 
