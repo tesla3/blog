@@ -3,6 +3,7 @@ title: "Blog using github,hugo, netlify"
 date: 2019-05-19T12:22:19-07:00
 draft: false
 ---
+update (Tue May 21 12:15:06 PDT 2019) : [kubeflow website](https://github.com/kubeflow/website) uses same set up.
 
 I am late, very late, to the game of blogging. But, any way, I start to have something to say. Inspired by [this post] (https://blog.omerh.me/post/2019/05/17/first_post/) and [this post] (https://brainfood.xyz/post/20190518-host-your-own-blog-in-1-hour/), I decided to get it going. 
 
